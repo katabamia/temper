@@ -44,9 +44,9 @@ int main(){
         lt = localtime(&t);
         
         char dt[80];
-        strftime(dt, 80, "%Y/%m/%d %H:%M:%S", lt);
+        strftime(dt, 80, "%Y/%m/%d %I:%M:%S %p %Z", lt);
 
-        printf("%s,%.2f\n", dt, tempc);
+        printf("%s,%.2f\n", dt + "| ", tempc + "°C");
         fflush(stdout);
 
         return 0;
