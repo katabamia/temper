@@ -41,10 +41,10 @@ int main(){
         struct tm *utc;
         time_t t;
         t = time(NULL);
-        utc = localtime(&t);
+        lt = localtime(&t);
         
         char dt[80];
-        strftime(dt, 80, "%Y/%m/%d %H:%M:%S", utc);
+        strftime(dt, 80, "%Y/%m/%d %H:%M:%S", lt);
 
         printf("%s,%.2f\n", dt, tempc);
         fflush(stdout);
