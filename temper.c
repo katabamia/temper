@@ -45,8 +45,11 @@ int main(){
         
         char dt[80];
         strftime(dt, 80, "%Y/%m/%d %I:%M:%S %p %Z", lt);
+        
+        strcat(dt, "| ");
+        strcat(tempc, "°C")
 
-        printf("%s,%.2f\n", dt, "| ", tempc, "°C");
+        printf("%s,%.2f\n", dt, tempc);
         fflush(stdout);
 
         return 0;
