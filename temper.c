@@ -38,7 +38,7 @@ int main(){
         /* Apply calibrations */
         tempc = (tempc * scale) + offset;
 
-        struct tm *utc;
+        struct tm *lt;
         time_t t;
         t = time(NULL);
         lt = localtime(&t);
